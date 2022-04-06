@@ -2,8 +2,13 @@ const express = require('express');
 const graphqlHTTP = require('express-graphql').graphqlHTTP;
 const schema = require('./schema/schema');
 const mongoose = require('mongoose');
+const cors = require('cors');
+
 
 const app = express();
+
+// allow cross-origin requests
+app.use(cors());
 
 mongoose.connect('mongodb+srv://admin:admin123@cluster0.p6ob5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
 mongoose.connection.once('open',() =>{
