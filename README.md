@@ -30,11 +30,11 @@ To add a new author you must create a custom mutation query.
 
 ```
 Mutation{
-  addAuthor(name:<>, age:<>, ID:<>){
+  addAuthor(name:<>, age:<>){
     name
   }
 }
 ```
 ## Stack
 
-NodeJS + Express | MongoDB | React 
+NodeJS + Express | MongoDB | React | Heroku
